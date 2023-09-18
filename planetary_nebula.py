@@ -20,7 +20,7 @@ def create_plot(data, column_index, column_label):
     plt.savefig('Temperature_profile.png')
 
 if __name__ == "__main__":
-    file_path = '/home/mathew/Desktop/Simulations/Cloudy/planetary_nebula/planetary_nebulapn.ovr'  # Replace with your file path
+    file_path = '/home/mathew/Desktop/pion/photoionisation_test/cloudy/test1pn.ovr'  # Replace with your file path
     data = read_data(file_path)
 
     column_index = 1  # Replace with the index of the desired column (Te in this case)
