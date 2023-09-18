@@ -1,0 +1,11 @@
+# Ignore compiled files
+*.o
+*.class
+*.exe
+# Ignore log files
+*.log
+*.png
+# Ignore directories
+/venv/
+/.idea/
+
