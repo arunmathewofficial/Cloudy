@@ -74,8 +74,8 @@ def create_plot(df, column_index, column_label, plotdir):
 
 
 # Read the example data
-file = '/home/mathew/Desktop/pion/photoionisation_test/cloudy/HII_region.ovr'
-plotdir = '/home/mathew/Desktop/pion/photoionisation_test/cloudy/'
+file = '/home/mathew/Desktop/pion/photoionisation_test/cloudy_Haworth/HII_region.ovr'
+plotdir = '/home/mathew/Desktop/pion/photoionisation_test/cloudy_Haworth/'
 
 file_path = file # Replace with your file path
 labels, data = load_labled_data(file_path)

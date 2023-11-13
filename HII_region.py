@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import numpy as np
 
+parsec = 3.086E+18
 
 ##################################################################
 def load_labled_data(file_path, comment_prefix='#'):
@@ -68,18 +69,19 @@ def create_plot(data, column_index, column_label, plotdir):
     column_data = data[:, column_index]
 
     plt.figure(figsize=(10, 6))
-    plt.plot(depth, column_data)
+    plt.plot(depth/parsec, column_data)
     plt.xlabel('Depth')
     plt.ylabel(column_label)
     plt.title(f'{column_label} vs Depth')
     plt.grid()
+    plt.ylim(1000, 12000)
     plt.savefig(plotdir + column_label +'.png')
 
 
 
 # Read the example data
-file_path = '/home/mathew/Desktop/pion/photoionisation_test/cloudy/HII_region.ovr'
-plotdir = '/home/mathew/Desktop/pion/photoionisation_test/cloudy/'
+file_path = '/home/mathew/Desktop/pion/photoionisation_test/cloudy_Haworth_Atlas/HII_region.ovr'
+plotdir = '/home/mathew/Desktop/pion/photoionisation_test/cloudy_Haworth_Atlas/'
 
 #file_path = file # Replace with your file path
 #labels, data = load_labled_data(file_path)
